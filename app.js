@@ -13,7 +13,7 @@ let nuevasTareas = []
 
 // Selectores 
 let botonGuardar = document.getElementById("guardar")
-let table = document.getElementById("table")
+let table = document.getElementById("mostrarTareasPendientes")
 
 //FUNCIONES
 //Funcion que guarda los datos y los envia a localStorage
@@ -48,9 +48,9 @@ function mostrarTareas() {
             td1.setAttribute("class", "col-2")
             tabla.appendChild(td1)
             let button = document.createElement("button")
-            button.setAttribute("class", "text-danger")
+            button.setAttribute("class", "btnBorrar")
             button.setAttribute("onclick", `borrarDatos(${element.id})`)
-            button.textContent = "Borrar"
+            button.textContent = "Listo!"
             td1.appendChild(button)
             table.appendChild(tabla)
         });
@@ -72,3 +72,13 @@ botonGuardar.addEventListener("click", guardar)
 //LOGICA
 mostrarTareas()
 
+//PETICION AJAX
+
+//const tareasPendientesJSON = "./tareaspendientes.json"
+
+//$.getJSON(tareasPendientesJSON, function (resultado, estado) {
+//    if(estado === "success"){
+//   console.log(respuesta)}))
+        
+            
+        

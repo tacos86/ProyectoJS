@@ -1,0 +1,12 @@
+[
+    {
+        "tarea":"Pasear al gato", "id": "Date.now"
+    
+    },
+    {
+        "tarea":"Alimentar al perro", "id": "Date.now"
+    },
+    {
+        "tarea":"Pedir pizza", "id": "Date.now"
+    }    
+]
