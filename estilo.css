@@ -8,9 +8,8 @@ body {
   justify-content: center;
   align-items: center;
   color: hsl(198, 1%, 29%);
-  font-family: 'Gochi Hand', cursive;
   text-align: center;
-  font-size: 130%;  
+    
 }
 @media only screen and (min-width: 500px) {
   body {
@@ -40,9 +39,11 @@ body {
 }
 h1 {
   transform: rotate(2deg);
-  padding: 0.2rem 1.2rem;
+  padding: 0.7rem 1.2rem;
   border-radius: 20% 5% 20% 5%/5% 20% 25% 20%;
   background-color: #ff4f89;
+  font-family: 'Chelsea Market', cursive;
+  
   font-size: 1.5rem;
 }
 @media only screen and (min-width: 500px) {
@@ -54,6 +55,8 @@ h1 {
 label {
   display: block;
   margin-bottom: 0.5rem;
+  font-family: 'Architects Daughter', cursive;
+  font-size: 1rem;
 }
 input {
     box-sizing: border-box;
@@ -63,7 +66,7 @@ input {
     border-bottom-left-radius:3px 15px;
     border: solid 3px transparent;
     border-bottom: dashed 3px #b7ebe1;
-    font-family: 'Gochi Hand', cursive;
+    font-family: 'Architects Daughter', cursive;
     font-size: 1rem;
     color: hsla(260, 2%, 25%, 0.7);
     width: 70%;
@@ -71,7 +74,7 @@ input {
   
     input:focus {
     outline: none;
-    border: solid 3px #ea95e0;
+    border: solid 3px #b7ebe1;
   }
 
 @media only screen and (min-width: 500px) {
@@ -86,7 +89,8 @@ button {
   border: none;
   transform: rotate(4deg);
   transform-origin: center;
-  font-family: 'Gochi Hand', cursive;
+  font-family: 'Architects Daughter', cursive;
+  font-size: 20px;
   text-decoration: none;
   padding-bottom: 3px;
   border-radius: 5px;
@@ -109,19 +113,37 @@ span {
   outline: 0;
 }
 .listaTareas {
-  text-align: left;}
+  text-align: left;
+  font-family: 'Architects Daughter', cursive;
+font-weight: lighter;}
   
 
 
 .btnBorrar{
-  background-color: #f1f5f8;
+  background-color: white;
+  border: solid 2px hsl(198, 1%, 29%);
   background-image: none;
   font-size: 1rem;
   padding: 4px 10px;
   transform: none;
   box-shadow: 1px 1px 1px hsl(198, 1%, 29%);
+  
 
 }
 .btnBorrar:hover{
-  border-bottom: 1px solid #ff4f89;
+  background-color:  #ff4f89;
 }
+
+.frase {
+   display: inline-block;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
+    padding: 10px;    
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 10px;
+    background-color: #b7ebe1;
+    border-radius: 10%;
+    font-family: 'Architects Daughter', cursive;}
+  
+    
+ 

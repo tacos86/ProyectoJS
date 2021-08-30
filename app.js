@@ -50,7 +50,7 @@ function mostrarTareas() {
             let button = document.createElement("button")
             button.setAttribute("class", "btnBorrar")
             button.setAttribute("onclick", `borrarDatos(${element.id})`)
-            button.textContent = "Listo!"
+            button.textContent = "X"
             td1.appendChild(button)
             table.appendChild(tabla)
         });
@@ -74,11 +74,28 @@ mostrarTareas()
 
 //PETICION AJAX
 
-//const tareasPendientesJSON = "./tareaspendientes.json"
-
-//$.getJSON(tareasPendientesJSON, function (resultado, estado) {
-//    if(estado === "success"){
-//   console.log(respuesta)}))
+/*const prediccionJSON = "./prediccion.json"
+$.getJSON(prediccionJSON, function (resultado, estado) {
+   if(estado === "success"){
+       let texto = resultado;
+       $("body").prepend(`<div>
+                            <h3>${texto}</h3>
+                        </div>`);
+  //console.log(resultado)
+}
+})*/
         
+//Declaramos la url que vamos a usar para el GET
+const URLGET = "./prediccion.json"
+    $.get(URLGET, function (respuesta, estado) {
+          if(estado === "success"){
             
-        
+            let miPrediccion2 = (respuesta[Math.round(Math.random()*(respuesta.length-1))]);           
+            console.log(miPrediccion2.prediccion);
+            let fraseDelDia = JSON.stringify(miPrediccion2.prediccion);
+            $(".frase").append(`<h4>
+            ${fraseDelDia}
+            </h4>`
+            )
+          }}
+    );
