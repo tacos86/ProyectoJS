@@ -74,26 +74,14 @@ mostrarTareas()
 
 //PETICION AJAX
 
-/*const prediccionJSON = "./prediccion.json"
-$.getJSON(prediccionJSON, function (resultado, estado) {
-   if(estado === "success"){
-       let texto = resultado;
-       $("body").prepend(`<div>
-                            <h3>${texto}</h3>
-                        </div>`);
-  //console.log(resultado)
-}
-})*/
-        
-//Declaramos la url que vamos a usar para el GET
-const URLGET = "./prediccion.json"
+    const URLGET = "./prediccion.json"
     $.get(URLGET, function (respuesta, estado) {
           if(estado === "success"){
             
             let miPrediccion2 = (respuesta[Math.round(Math.random()*(respuesta.length-1))]);           
             console.log(miPrediccion2.prediccion);
             let fraseDelDia = JSON.stringify(miPrediccion2.prediccion);
-            $(".frase").append(`<h4>
+            $(".frase").append(`<h4> Hoy.. <br>
             ${fraseDelDia}
             </h4>`
             )

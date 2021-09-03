@@ -1,51 +1,43 @@
-class Theme {
-    constructor(tipo, date) {
-        this.tipo = tipo,
-            this.date = date
-    }
-}
-const theme = () => {
-    if (localStorage.getItem("modo") == "oscuro") {
+//FUNCIONES
+
+const tema = () => {
+    if(localStorage.getItem("modo") == "uno"){
         aclarar()
     } else {
         oscurecer()
     }
 }
-const oscurecer = () => {
-    $("body").css("background-color", "black")
-    $("p").css("color", "white")
-    $("h2").css("color", "white")
-    $("h4").css("color", "white")
-    $("header").css("background-color", "white")
-    $("a").css("color", "black")
-    document.getElementById("theme").textContent = "LIGTH"
-    let modo = new Theme("oscuro", 2021)
-    localStorage.setItem("modo", JSON.stringify(modo))
+
+//Creo la función para cuando le de click al botón, pase a modo oscuro la página
+const oscurecer = () => {    
+    $("body").css("background-color","#404040");
+    $(".container").css("background-color","#F2F2F0");
+    $("h1").css("background-color","#262626");
+    $("h1").css("color","white");
+    $("label").css("color","black");
+    $("#modoOscuro").css("background-color","#ff4f89");
+    document.getElementById("modoOscuro").textContent = "dos"
+    localStorage.setItem("modo","uno");
 }
+
+//Creo la función para volver al modo claro de la página
 const aclarar = () => {
-    $("body").css("background-color", "white")
-    $("p").css("color", "black")
-    $("h2").css("color", "black")
-    $("h4").css("color", "black")
-    $("header").css("background-color", "black")
-    $("a").css("color", "white")
-    document.getElementById("theme").textContent = "DARK"
-    let modo = new Theme("claro", 2021)
-    localStorage.setItem("modo", JSON.stringify(modo))
+    $("body").css("background-color","#ffa3c1");
+    $(".container").css("background-color","#f1f5f8");
+    $("h1").css("background-color","#ff4f89");
+    $("h1").css("color","#494a4b");
+    $("label").css("color","#494a4b");
+    $("#modoOscuro").css("background-color","#9b254a");
+    $(".frase").css("background-color","#b7ebe1");
+    $(".frase").css("color","#494a4b");
+    document.getElementById("modoOscuro").textContent = "uno"
+    localStorage.setItem("modo","dos");
 }
-$("#theme").click(theme)
-if (JSON.parse(localStorage.getItem("modo")).tipo == "oscuro") {
+
+//SELECTORES
+$("#modoOscuro").click(tema);
+if (localStorage.getItem("modo").tipo == "uno") {
     oscurecer()
 } else {
-    aclarar()
-}
-//ENTIDADES O CLASES
-//VARIABLES SELECTORES CONSTANTES ARRAYS
-//FUNCIONES
-//EVENTOS
-//LOGICA
-if (localStorage.getItem("modo") == "oscuro") {
-    oscurecer()
-} else {
-    aclarar()
+   aclarar()
 }

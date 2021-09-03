@@ -145,5 +145,9 @@ font-weight: lighter;}
     border-radius: 10%;
     font-family: 'Architects Daughter', cursive;}
   
-    
+ .btnModo{
+   background-image: none;
+   margin-bottom: 1rem;
+   padding: 5px 20px;
+ }   
  
