@@ -55,7 +55,7 @@ function mostrarTareas() {
             table.appendChild(tabla)
         });
     } else {
-        alert("No tenes tareas pendientes");
+        console.log("Aún no ingresaste ninguna tarea");
     }
 }
 
@@ -81,7 +81,7 @@ mostrarTareas()
             let miPrediccion2 = (respuesta[Math.round(Math.random()*(respuesta.length-1))]);           
             console.log(miPrediccion2.prediccion);
             let fraseDelDia = JSON.stringify(miPrediccion2.prediccion);
-            $(".frase").append(`<h4>${fraseDelDia}</h4>`
+            $("#frase").append(`<h4>${fraseDelDia}</h4>`
             )
           }}
     );

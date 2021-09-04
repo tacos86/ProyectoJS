@@ -11,10 +11,11 @@ const tema = () => {
 //Creo la función para cuando le de click al botón, pase a modo oscuro la página
 const oscurecer = () => {    
     $("body").css("background-color","#404040");
-    $(".container").css("background-color","#F2F2F0");
+    $(".container").css("background-color","#a2a2a2");
     $("h1").css("background-color","#262626");
     $("h1").css("color","white");
     $("label").css("color","black");
+    $("input").css("color","black");
     $("#modoOscuro").css("background-color","#ff4f89");
     document.getElementById("modoOscuro").textContent = "Light"
     localStorage.setItem("modo","Dark");
