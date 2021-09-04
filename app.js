@@ -8,7 +8,7 @@ class nuevaTarea {
 }
 //VARIABLES
 
-// Array donde se almacenan las tarea pendientes
+// Array donde se almacenan las tareas pendientes
 let nuevasTareas = []
 
 // Selectores 
@@ -23,14 +23,14 @@ function guardar() {
     
     if (localStorage.getItem("pendientes") != null) {
         let index = guardarLocal.length + 1
-        let usuario = new nuevaTarea(tarea, index)
-        guardarLocal.push(usuario)
+        let tareaAgregada = new nuevaTarea(tarea, index)
+        guardarLocal.push(tareaAgregada)
         localStorage.setItem("pendientes", JSON.stringify(guardarLocal))
     } else {
         localStorage.clear()
         let index = 1
-        let usuario = new nuevaTarea(tarea, index)
-        nuevasTareas.push(usuario)
+        let tareaAgregada = new nuevaTarea(tarea, index)
+        nuevasTareas.push(tareaAgregada)
         localStorage.setItem("pendientes", JSON.stringify(nuevasTareas))
     }
 }
