@@ -1,7 +1,7 @@
 //FUNCIONES
 
 const tema = () => {
-    if(localStorage.getItem("modo") == "uno"){
+    if(localStorage.getItem("modo") == "Dark"){
         aclarar()
     } else {
         oscurecer()
@@ -16,8 +16,8 @@ const oscurecer = () => {
     $("h1").css("color","white");
     $("label").css("color","black");
     $("#modoOscuro").css("background-color","#ff4f89");
-    document.getElementById("modoOscuro").textContent = "dos"
-    localStorage.setItem("modo","uno");
+    document.getElementById("modoOscuro").textContent = "Light"
+    localStorage.setItem("modo","Dark");
 }
 
 //Creo la función para volver al modo claro de la página
@@ -28,15 +28,15 @@ const aclarar = () => {
     $("h1").css("color","#494a4b");
     $("label").css("color","#494a4b");
     $("#modoOscuro").css("background-color","#9b254a");
-    $(".frase").css("background-color","#b7ebe1");
+    $(".frase").css("background-color","#FFFFA5");
     $(".frase").css("color","#494a4b");
-    document.getElementById("modoOscuro").textContent = "uno"
-    localStorage.setItem("modo","dos");
+    document.getElementById("modoOscuro").textContent = "Dark"
+    localStorage.setItem("modo","Light");
 }
 
 //SELECTORES
 $("#modoOscuro").click(tema);
-if (localStorage.getItem("modo").tipo == "uno") {
+if (localStorage.getItem("modo").tipo == "Dark") {
     oscurecer()
 } else {
    aclarar()
